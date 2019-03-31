@@ -1,0 +1,7 @@
+Las funciones devuelven un valor, los procedimientos no.
+signed utiliza negativos y positivos, unsigned no.
+
+Char = 1 bit
+Celulas biestables - Dos opciones
+Nibbles = unidad de 4 bits
+long long = no pertenece a ANSI

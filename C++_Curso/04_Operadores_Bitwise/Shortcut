@@ -1,0 +1,23 @@
+Existe una regla que en muchas ocasiones nos puede resultar útil, ya que nos puede ahorrar tiempo y comprobaciones adicionales.
+
+Esta regla se conoce como "cortocircuito" o "shortcut", y se aplica de forma diferente a expresiones AND y OR.
+
+En el caso de operaciones AND, consiste en que si la primera expresión evaluada es false, la segunda si siquiera se evalúa, ya que el resultado será siempre false independientemente del valor del segundo operando.
+
+En el caso de operaciones OR, si la primera expresión sea true, la segunda no se evalúa, ya que el resultado será siempre true, independientemente del valor de la segunda expresión.
+
+Esto es porque en una operación && el resultado sólo puede ser true cuando los dos operandos sean true, y en una operación || el resultado sólo puede ser false si ambos operandos son false. En el momento en que en una expresión AND uno de los operandos sea false, o que en una expresión OR uno de los operandos sea true, el valor del otro operando es irrelevante.
+
+Si tenemos en cuenta este comportamiento, podremos ahorrar tiempo de ejecución si colocamos en primer lugar la expresión más fácil de calcular, o aquella cuyo valor sea más probablemente false en el caso de una expresión AND o true, para una expresión OR.
+
+También habrá casos en que una de las expresiones sea indeterminada cuando la otra sea false en una expresión AND, o true en una expresión OR. En ese caso, será preferible colocar la expresión potencialmente indeterminada en el segundo lugar.
+
+SIZE OF
+
+En ambos casos el resultado es una constante entera que da el tamaño en bytes del espacio de memoria usada por el operando, que es determinado por su tipo. El espacio reservado por cada tipo depende de la plataforma.
+
+En el primer caso, el tipo del operando es determinado sin evaluar la expresión, y por lo tanto sin efectos secundarios. Si el operando es de tipo char, el resultado es 1.
+
+A pesar de su apariencia, sizeof() NO es una función, sino un OPERADOR.
+
+

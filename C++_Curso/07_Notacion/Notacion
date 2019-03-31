@@ -1,0 +1,9 @@
+C++ es un lenguaje pensado para optimizar el código y conseguir un buen rendimiento por parte del ordenador cuando ejecute nuestros programas. Esto nos obliga a prestar atención a detalles de bajo nivel (cercanos al hardware), detalles que en otros lenguajes de alto nivel no se tienen en cuenta.
+
+Esto tiene un precio: debemos estar más atentos a los detalles, pero las ventajas compensan, ya que nuestros programas son mucho más rápidos, compactos y eficientes.
+
+En todos estos casos que hemos visto en este capítulo, especificar el tipo de las constantes tiene el mismo objetivo: evitar que se realicen conversiones de tipo durante la ejecución del programa, obligando al compilador a hacerlas durante la fase de compilación.
+
+Esto es una optimización, ya que generalmente, los programas se ejecutan muchas más veces de las que se compilan, así que parece razonable invertir más esfuerzo en minimizar el tiempo de ejecución que el de compilación.
+
+Si en el ejemplo anterior para float hubiéramos escrito if(x <= 1)..., el compilador almacenaría el 1 como un entero, y durante la fase de ejecución se convertirá ese entero a float para poder compararlo con x, que es float. Al poner "1.0" estamos diciendo al compilador que almacene esa constante como un valor en coma flotante, con lo cual nos evitamos la conversión de tipo cada vez que se evalúe la condición de la sentencia if. Lo mismo se aplica a las constantes long, unsigned y char.

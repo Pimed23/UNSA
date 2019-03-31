@@ -1,0 +1,16 @@
+Existe un método para acceder a una variable global enmascarada por una variable local. Se trata del operador de ámbito, que consiste en dos caracteres de dos puntos seguidos (::).
+
+Veremos este operador con más detalle en el capítulo dedicado a los espacios con nombre, pero veamos ahora cómo lo podemos usar para acceder a una variable global enmascarada:
+
+int x; // Variable global
+
+int main()
+{
+   int x; // Variable local que enmascara a la global
+   
+   x = 10; // Accedemos a la variable local
+   ::x = 100; // Mediante el operador de ámbito accedemos a la global
+   return 0;
+}
+
+El operador de ámbito, usado de este modo, permite acceder al espacio de variables global. Pero este no es más que un uso restringido del operador, que tiene muchas más aplicaciones.

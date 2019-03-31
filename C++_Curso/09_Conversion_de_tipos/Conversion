@@ -1,0 +1,23 @@
+En estos casos, cuando los operandos de cada operación binaria asociados a un operador son de distinto tipo, el compilador los convierte a un tipo común. Existen reglas que rigen estas conversiones, y aunque pueden cambiar ligeramente de un compilador a otro, en general serán más o menos así:
+
+Cualquier tipo entero pequeño como char o short es convertido a int o unsigned int. En este punto cualquier pareja de operandos será int (con o sin signo), long, long long, double, float o long double.
+Si un operando es de tipo long double, el otro se convertirá a long double.
+Si un operando es de tipo double, el otro se convertirá a double.
+Si un operando es de tipo float, el otro se convertirá a float.
+Si un operando es de tipo unsigned long long, el otro se convertirá a unsigned long long.
+Si un operando es de tipo long long, el otro se convertirá a long long.
+Si un operando es de tipo unsigned long, el otro se convertirá a unsigned long.
+Si un operando es de tipo long, el otro se convertirá a long.
+Si un operando es de tipo unsigned int, el otro se convertirá a unsigned int.
+Llegados a este punto ambos operandos son int.
+Veamos ahora el ejemplo:
+
+c = a + b; caso 10, ambas son int.
+
+s = r + a; caso 4, a se convierte a float.
+
+d = r + b; caso 4, b se convierte a float.
+
+d = n + a + r; caso 1, n se convierte a int, la operación resultante corresponde al caso 4, el resultado (n+a) se convierte a float.
+
+t = r + a - s + c; caso 4, a se convierte a float, caso 4 (r+a) y s son float, caso 4, c se convierte a float.

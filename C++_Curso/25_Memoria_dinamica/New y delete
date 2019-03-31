@@ -1,0 +1,6 @@
+Reserva de memoria usando NEW
+
+new es usado para asignar memoria dinamica
+new busca un bloque del tamano asignado y regresa la direccion del bloque
+asigna la direccion a un puntero.
+

@@ -1,0 +1,17 @@
+////////////////////////////////////////////////////////  PROGRAMACION ORIENTADA A OBJETOS  ///////////////////////////////////////////////////////////
+
+PRINCIPIOS DE LA POO
+
+- ABSTRACCION: Es el proceso donde tu muestras solo datos "relevantes" y escondes los que no son "necesarios" para el usuario.
+
+- ENCAPSULACION: Es el proceso de combinar datos y funciones en un sola unidad llamada clase, los datos aislados son llamados "DATA HIDING".
+
+- HERENCIA: Es el proceso por el cual una clase "hija" adquiere propiedades de una clase "padre".
+
+- POLIMORFISMO: Es el proceso por el cual se puede hacer una accion de mas de una manera.
+
+ATRIBUTOS Y METODOS
+
+- ATRIBUTOS: Caracteristicas del objeto.
+
+- METODOS: Acciones que realiza el objeto.

@@ -1,0 +1,43 @@
+HANDLING FILES
+1- Open / Create a file
+2- Read / Write a file
+3- Close file
+
+
+CREATE AND WRITE FILE ( OUTPUT )
+1- Create object of ofstream class
+2- Write a content
+3- Close the file
+
+OPEN AND READ FILE( INPUT )
+1- Create object of ifstream class
+2- Open the file
+3- Read the content using ifstream object
+   obj >> alm;      obj.getline( alm, size );
+4- Close the file
+
+FILE open() FUNCTION
+- By default ofstream opens file for writing only
+- By default ifstream opens file for reading only
+
+THREE FORMS TO CREATE A FILE
+1- USING A CONSTRUCTOR:
+    ofstream etiqueta("archive_name.txt");
+
+2- USING open() FUNCTION
+    ofstream etiqueta;
+    etiqueta.open("archive_name.txt");
+
+3- open() FUNCTION WITH MODE
+    ofstream etiqueta;
+    etiqueta.open("archive_name.txt", mode );
+
+    MODES ////////
+    ios::out        only for write
+    ios::in         only for read
+    ios::app        for append end of file
+    ios::ate        go to end of file on opening
+    ios::binary     binary file
+    ios::trunc      delete content of file if exists
+    ios::nocreate   open fails if the file doesnt exists
+    ios::noreplace  open fails if the file already exists

@@ -1,0 +1,37 @@
+Polimorfismo -> 1 nombre y muchas formas:
+2 Tipos de Polimorfismo:
+- Compile Time Polymorfism
+    + Funciones Sobrecargadas
+        Las funciones sobrecargadas son las que tienen mismo nombre
+        pero diferente definicion
+    + Operadores Sobrecargados
+        Un operador que puede realizar mas de una tarea
+
+- Run Time Polymorfism
+    + Virtual Base Functions or Virtual Functions
+        En la clase base y en la clase derivada las funciones tienen    
+        el mismo nombre, en el tiempo de ejecucion el compilador decide
+        que funcion invocar (Overriding)
+    
+        Reglas para las funciones virtuales base
+        - Deben pertenecer a una clase
+        - No pueden ser static
+        - Se accede a ellas utiizando punteros
+        - Puede ser friend de otra clase
+        - Debe ser definida en la clase base aunque esta no se pueda usar
+    
+    + Pure Virtual Functions
+        Es una funcion que no tiene definicion en la clase base
+
+        Caracteristicas
+        - Pure Virtual Function significa no hacer nada
+        - Una clase que contiene una función virtual pura no se puede usar 
+        para crear ningún objeto directo propio
+        - Este tipo de clase es llamado clase abstracta
+
+        Ejemplo:
+            virtual void Display = 0;
+            virtual void Display {}
+
+        - No se puede crear objetos en una clase abstracta pero se puede crear
+        punteros y referencias a la clase abstracta
